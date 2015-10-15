@@ -1,0 +1,78 @@
+---
+title: "Git & Github, Part 1"
+subtitle: "UM SSW DataLab"
+author: "Clayton Yochum"
+date: "October 15, 2015"
+output:
+  ioslides_presentation:
+    incremental: yes
+    widescreen: yes
+---
+
+## What's the DataLab?
+- New lab in the School of Social Work
+- Bringing a more data-scientific approach to social science
+- Emphasisis on open source tools (R, Git, Github, etc.)
+- Led by Bryan Perron and Joe Ryan (rad dudes)
+
+## Who am I?
+- Data/Software nerd
+- Data Engineer/Business Intelligence Analyst @ Barracuda Networks
+- Co-Organizer of the Ann Arbor R User Group
+- Consultant for DataLab (the non-academic one)
+- Math Degree from Michigan Tech
+
+## What to expect
+- Mixture of slides and demonstration
+- Basics of Git (software tool) & Github (website)
+- Stop me! Ask questions!
+- Help me help you!
+
+## Change Tracking & Source Control
+- Because appending numbers to document names is so 2000!
+- Google Docs, MS Office, etc. have some change tracking built-in
+- Tools like SVN, Mercurial, Git are best suited for _plaintext_ documents, like source code
+- Gives a change history allowing you to revert to old version, see who broke it, etc.
+
+## What's Git?
+- Distributed version control system
+- Created by Linus Torvalds to manage Linux development
+- Efficient, flexible, popular, mature
+- Complex, but it doesn't have to be difficult
+
+## Git Basics & Terminology
+- A git **repository** tracks a single _project_
+- A repository has one or more **branches** which each contain one or more **commits**
+- A **commit** is a record of _changes_ from the previous commit (which might be empty)
+- ![Six commits on two branches](simple_commits.png)
+
+## Simplest Git workflow
+- Make commits to a single branch (`master`)
+- This gives us reviewable history (`git log`)
+- Review changes before commit (`git diff`)
+
+# (Git demo)
+
+## Github
+- Hosting service for Git repositories (centralization)
+- Users **push**/**pull** between their local repo and the remote repo on Github
+- The most popular host for open-source software projects
+- Adds a ton of nice features on top of issues like bug/issue tracking, code review, etc.
+- Difficult to understate the value of Github in modern software development
+
+# (Github demo)
+
+# Questions?
+
+## What about Part 2?
+- Collaborative workflow with branches and code review pull requests
+- What should/should not be committed to a repo
+- `README.md`, `.gitignore`, and other best practices
+- Two weeks from now, October 29, same time & place
+
+## Ann Arbor R User Group
+- Next meetup is tonight, 7pm @ Barracuda Networks on Maynard
+- http://www.meetup.com/Ann-Arbor-R-User-Group/events/225716211/
+
+# Thanks!
+
