@@ -1,0 +1,74 @@
+---
+title: "Git & Github, Part 1"
+subtitle: "UM SSW DataLab"
+author: "Clayton Yochum"
+date: "October 15, 2015"
+output:
+  ioslides_presentation:
+    incremental: yes
+    widescreen: yes
+---
+
+## Part 1 Recap
+- git & github can be useful for collaborative data analysis
+- terminology: repository, commits, branches
+
+## Feedback/Questions from Part 1
+- less R focus
+- more real-world examples
+- can I use this with Word files?
+
+## What's New In Part 2?
+- command-line git (instead of RStudio)
+- different file formats
+- issues, (using) branches, and pull requests
+- demonstrate real workflows with the help of my beautiful assistant, Andrew
+
+## Using an Existing Repository
+- `git clone` makes a local copy of some other repository
+- no need to manually set the `remote`
+- will need permissions to `git push` any commits
+- you can also `fork` to copy the repo to _your_ account (then clone)
+
+# (demo)
+
+## Naive Workflow: Master
+- this is what we did last time!
+- `git commit` to save changes on branch `master`
+- `git push` to send your _local_ commits to the _remote_ repository
+- `git pull` to get commits from `remote`
+
+# (demo)
+
+## A Tissue for your Issue
+- use github _issues_ to track what needs to be done
+- discuss, categorize, assign (built-in project management)
+- reference these issues in your commit messages
+
+# (demo)
+
+## Conflict!
+- what happens if two people start from the same commit, and both make commits to the same branch?
+- :(
+
+# (demo)
+
+## Collaborative Workflow: Review THIS
+- make an issue
+- create a _feature_ branch
+- fix the issue with commits on that branch
+- push that branch / those commits!
+- file a Pull Request to merge the branch into `master`
+
+# (demo)
+
+## Merge Conflict Hell
+
+# (demo)
+
+# Questions?
+
+## Resources
+- find this presentation on github: [SSW-DataLabt/Workshops](https://github.com/SSW-DataLab/Workshops)
+- gamified git! [Learn Git Branching](https://pcottle.github.io/learnGitBranching/)
+
