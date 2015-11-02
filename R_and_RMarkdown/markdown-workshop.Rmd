@@ -1,0 +1,67 @@
+---
+title: "R & R-Markdown"
+subtitle: "Child & Adolescent Data Lab"
+date: '`r format(Sys.Date(), format = "%B %d, %Y")`'
+output: 
+  ioslides_presentation:
+    incremental: true
+    widescreen: true
+---
+
+```{r, include = FALSE, echo = FALSE}
+# ---- AM's Notes ----
+# Lacour study
+
+# It can be useful to people who don't use R
+# great for other languages, eg. python
+# ```{r} versus ```{python}
+
+# have an abstract for monday before
+# not an all-encompassing solution
+# but...
+# excellent for a dissertation & internal consistency
+```
+
+## Review & (brief) Outline
+
+- Git/GitHub
+- New questions?
+- Collaborative tools to *centralize* your workflow.
+
+- Extend on these concepts, as they relate to reproducible research
+- Similar mindset as last-time: provide an overview, help demonstrate options that have
+been highly useful in our work.
+
+## What is Reproducibility?
+
+"Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them." 
+  -- [JHDS Reproducible Research Course](https://www.coursera.org/course/repdata)
+
+ - Open Science
+
+ - Prevent Questionable-Research-Practices (QRPs)
+
+ - Promote transparency
+
+ - Maintain accountability and public trust
+
+## Who cares? | Essential tasks for researchers
+
+- Good standards for scientific research, but this outlook promotes good habits. 
+- You may be working with sensitive data (and might not be able to share it), but
+you can still gain a lot from using this perspective.
+
+- **3 major tasks:**
+
+  1. Analysis
+  2. Documentation/Description
+  3. Generating a report/product to share with colleagues, or community
+
+## Why R and R-Markdown?
+
+- R is great for almost any type of data analysis you can think of
+- If you've heard of it, there's probably a package for it
+- Can be used to build things, in addition to just data-analysis
+
+- Widely used, deep knowledge-base, open-source
+- Great tools being developed with scientists in mind (like `ggplot2` & R-Markdown!)
