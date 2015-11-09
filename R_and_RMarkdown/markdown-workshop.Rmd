@@ -21,7 +21,18 @@ output:
 # but...
 # excellent for a dissertation & internal consistency
 
+# reproducibility important for lots of work, but also for yourself
+# keep track of things, with version control!
+# don't save output!
+
+# literate programming
+# text and code all in one place, logical order
+# data automatically updated to reflect external changes
+# you test your code each time you knit/save the document
+# 
+
 # this comic is helpful http://www.phdcomics.com/comics/archive.php?comicid=1531
+
 ```
 
 ## Review & (brief) Outline
