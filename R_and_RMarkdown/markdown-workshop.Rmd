@@ -15,6 +15,10 @@ output:
 # It can be useful to people who don't use R
 # great for other languages, eg. python
 # ```{r} versus ```{python}
+# can be used with SAS!
+# PSID data can be set up in a chunk, and then R can take care of the rest.
+# Any variables made in a SAS chunk would have to be saved to disc :(
+# But, code can read in the files if necessary
 
 # have an abstract for monday before
 # not an all-encompassing solution
