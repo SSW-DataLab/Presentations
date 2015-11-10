@@ -9,6 +9,15 @@ output:
 ---
 
 ```{r, include = FALSE, echo = FALSE}
+# mypresentation.html?presentme=true
+
+# add notes in slides with:
+# <div class="notes">
+# Note
+# Note
+# Note
+# </div>
+
 # ---- AM's Notes ----
 # Lacour study
 
@@ -45,7 +54,7 @@ output:
 - New questions?
 - Collaborative tools to *centralize* your workflow.
 
-- Extend on these concepts, as they relate to reproducible research
+- Extend on these concepts, as they relate to concepts in reproducibility
 - Similar mindset as last-time: provide an overview, help demonstrate options that have
 been highly useful in our work.
 
@@ -56,23 +65,31 @@ been highly useful in our work.
 
  - Open Science
 
- - Prevent Questionable-Research-Practices (QRPs)
-
- - Promote transparency
-
- - Maintain accountability and public trust
+ - Good habits
 
 ## Who cares? | Essential tasks for researchers
 
-- Good standards for scientific research, but this outlook promotes good habits. 
-- You may be working with sensitive data (and might not be able to share it), but
-you can still gain a lot from using this perspective.
+- Good standards for scientific research
+- But... Difficult to maintain if you work with sensitive data
+- Perspective is valuable
 
 - **3 major tasks:**
 
   1. Analysis
   2. Documentation/Description
   3. Generating a report/product to share with colleagues, or community
+
+<div class="notes">
+- Reproducibility is being able to fully recreate another individual's analysis on your local system.
+- This makes it necessary to share both analytic code and data
+- Infeasible for certain types of research
+- DataLab can't share data-- too sensitive, major concerns with privacy for individuals involved
+- But we benefit internally from good documentation and building in reproducibility between analysts
+- Each individual working with the data should be able to step into an analysis file or processing file, and be able to contribute as necessary
+</div>
+
+## 
+
 
 ## Why R and R-Markdown?
 
@@ -82,3 +99,5 @@ you can still gain a lot from using this perspective.
 
 - Widely used, deep knowledge-base, open-source
 - Great tools being developed with scientists in mind (like `ggplot2` & R-Markdown!)
+
+## 
