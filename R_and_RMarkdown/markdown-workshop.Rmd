@@ -15,13 +15,28 @@ output:
 # It can be useful to people who don't use R
 # great for other languages, eg. python
 # ```{r} versus ```{python}
+# can be used with SAS!
+# PSID data can be set up in a chunk, and then R can take care of the rest.
+# Any variables made in a SAS chunk would have to be saved to disc :(
+# But, code can read in the files if necessary
 
 # have an abstract for monday before
 # not an all-encompassing solution
 # but...
 # excellent for a dissertation & internal consistency
 
+# reproducibility important for lots of work, but also for yourself
+# keep track of things, with version control!
+# don't save output!
+
+# literate programming
+# text and code all in one place, logical order
+# data automatically updated to reflect external changes
+# you test your code each time you knit/save the document
+# 
+
 # this comic is helpful http://www.phdcomics.com/comics/archive.php?comicid=1531
+
 ```
 
 ## Review & (brief) Outline
