@@ -130,6 +130,45 @@ been highly useful in our work.
 
 ## R-Markdown as literate statistical programming
 
+<div class="notes">
+- literate programming needs:
+    + a documentation language
+    + a programming language(s)
+- knitr is developed by Yihui Xie
+- allows you to develop both the necessary explanatory text, while simultaneously developing analytic code that ultimately displays your results.
+- Scientific manuscripts already set-up to be "recipes" for a research project-- at least with (methods, results)
+- Working with your text and code this way allows you to have a smaller distance between them
+- Thus, fewer switch costs! Keep your flow!
+- The important element is recording your work, and summarizing it-- no need to switch between editors.
+</div>
+
+- Processing/Analysis code & reporting done together.
+- Original concept from [Don Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)
+- An article is a stream of **text** and **code**
+- Article text explains what you're doing, rationale for analysis, steps taking place
+- Code "chunks" are executed sequentially to perform (& reproduce) the analysis.
+
+## R-Markdown as literate statistical programming
+<div class="notes">
+- nitty gritty
+- may not be useful to all audience members
+- emphasize what it solves
+</div>
+
+- **Clean session**
+    - Results are genereated anew, each time the report is generated
+    - Caching is possible for computationally expensive steps
+
+- **In-line** code
+    - No need to make numbers derived from data hard-written
+
+```{r eval = FALSE}
+There are `r nrow(my_data)` individuals.
+The estimated correlation between x and y was `r cor(x, y)`.
+```
+
+## R-Markdown as literate statistical programming
+
 ![markdown-0](example-rmd-head.PNG)
 
 ## R-Markdown as literate statistical programming
@@ -144,21 +183,10 @@ been highly useful in our work.
 
 ![markdown-3](example-rmd-pdf-1.PNG)
 
-## R-Markdown as literate statistical programming
+## Analyses/Manuscripts as "Recipes"
 
-<div class="notes">
-- literate programming needs:
-    + a documentation language
-    + a programming language(s)
-- allows you to develop both the necessary explanatory text, while simultaneously developing analytic code that ultimately displays your results.
-- Scientific manuscripts already set-up to be "recipes" for a research project-- at least with (methods, results)
-- Working with your text and code this way allows you to have a smaller distance between them
-- Thus, fewer switch costs! Keep your flow!
-- The important element is recording your work, and summarizing it-- no need to switch between editors.
-</div>
-
-- Processing/Analysis code & reporting done together.
-- Original concept from [Don Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)
-- An article is a stream of **text** and **code**
-- Article text explains what you're doing, rationale for analysis, steps taking place
-- Code "chunks" are executed sequentially to perform (& reproduce) the analysis.
+- Reproducibility an important subject overall, but has benefits even for those who work with sensitive files
+- Good code/syntax allows you to reconstruct an analysis for yourself
+- Storing local figures, data, summaries is a lot of cognitive overhead
+- Markdown files encompass a product/report from start-to-finish
+- Figures/tables are embedded in the output-- no need to have a file of figures.
