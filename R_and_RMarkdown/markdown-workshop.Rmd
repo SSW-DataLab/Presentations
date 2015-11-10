@@ -60,6 +60,13 @@ been highly useful in our work.
 
 ## What is Reproducibility?
 
+<div class="notes">
+- Lots of government and public data being produced and shared
+- Increased access and demand means there are more eyes looking at the same stuff
+- Varying levels of ability and expertise lead to potentially non-reproducible work
+- Best way to ensure good quality is through good documenation, and control of materials
+</div>
+
 "Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them." 
   -- [JHDS Reproducible Research Course](https://www.coursera.org/course/repdata)
 
@@ -68,16 +75,6 @@ been highly useful in our work.
  - Good habits
 
 ## Who cares? | Essential tasks for researchers
-
-- Good standards for scientific research
-- But... Difficult to maintain if you work with sensitive data
-- Perspective is valuable
-
-- **3 major tasks:**
-
-  1. Analysis
-  2. Documentation/Description
-  3. Generating a report/product to share with colleagues, or community
 
 <div class="notes">
 - Reproducibility is being able to fully recreate another individual's analysis on your local system.
@@ -88,16 +85,80 @@ been highly useful in our work.
 - Each individual working with the data should be able to step into an analysis file or processing file, and be able to contribute as necessary
 </div>
 
-## 
+- Good standards for scientific research
+- But... Difficult to maintain if you work with sensitive data
+- Perspective is valuable
 
+## 3 Essential Tasks for Researchers
 
-## Why R and R-Markdown?
+1. Data Analysis
+    + Diving deep
+    + Analysis scripts? Syntax? Output files?
+    + **Extract results, in order to interpret findings**
+2. Documentation/Description
+    + Create methods/results/discussion
+    + **Arrange statistics, tables, figures into report** (or manuscript, .docx, etc.)
+3. Sharing with colleagues/community
+    + Forward manuscript to collaborators
+    + Receive comments & feedback
+    + **Exchanging information in order to iterate**
+    + Repeat #1 & #2
 
+## You already know this stuff | Why R and R-Markdown?
+
+<div class="notes">
 - R is great for almost any type of data analysis you can think of
 - If you've heard of it, there's probably a package for it
 - Can be used to build things, in addition to just data-analysis
+- Great tools being created for scientists
+- But a major reason to use RMarkdown specifically, is because it helps you collapse some of these three essential tasks
+- It's not a panacea
+- You may shift back to word or some other editor, or even analysis software from time to time
+- But using Markdown in this way requires you to approach the three tasks a little differently
+</div>
+
+- **Do I have to use R?**
+    - (yes)
+    - But there's some support for other languages! 
+    - (python & SAS, more on this later)
 
 - Widely used, deep knowledge-base, open-source
-- Great tools being developed with scientists in mind (like `ggplot2` & R-Markdown!)
+- Great tools being developed with scientists in mind (like `ggplot2` & R-Markdown!)<br>
 
-## 
+- **Collapse the three essential tasks**
+- Not a fix-all for everything
+
+## R-Markdown as literate statistical programming
+
+![markdown-0](example-rmd-head.PNG)
+
+## R-Markdown as literate statistical programming
+
+![markdown-1](example-rmd-head-1.PNG)
+
+## R-Markdown as literate statistical programming
+
+![markdown-2](example-rmd-pdf.PNG)
+
+## R-Markdown as literate statistical programming
+
+![markdown-3](example-rmd-pdf-1.PNG)
+
+## R-Markdown as literate statistical programming
+
+<div class="notes">
+- literate programming needs:
+    + a documentation language
+    + a programming language(s)
+- allows you to develop both the necessary explanatory text, while simultaneously developing analytic code that ultimately displays your results.
+- Scientific manuscripts already set-up to be "recipes" for a research project-- at least with (methods, results)
+- Working with your text and code this way allows you to have a smaller distance between them
+- Thus, fewer switch costs! Keep your flow!
+- The important element is recording your work, and summarizing it-- no need to switch between editors.
+</div>
+
+- Processing/Analysis code & reporting done together.
+- Original concept from [Don Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)
+- An article is a stream of **text** and **code**
+- Article text explains what you're doing, rationale for analysis, steps taking place
+- Code "chunks" are executed sequentially to perform (& reproduce) the analysis.
