@@ -1,0 +1,64 @@
+---
+title: "Example Markdown"
+author: "Andrew Moore"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Plotting the `midwest` data-set
+
+`midwest` is a data-set contained in the `ggplot2` library. It contains demographics on counties in the midwest, such as *college-achievement*, *income*, and *population density*. I'll be making some visualizations at the county-level eventually, and I'd like to get used to working with this kind of data.
+
+The data can be retrieved after the `ggplot2` package is loaded. The code-chunk below sets up my workspace. We'll start by taking a quick look at the data.
+
+```{r setup, echo = TRUE, message = FALSE, warning = FALSE}
+# load the R packages I want to use
+library(ggplot2)
+library(dplyr)
+library(knitr)
+library(printr)
+
+# access the dataset stored in R
+data(midwest)
+
+# pull out only Michigan's data
+midwest <- filter(midwest, state == "MI")
+
+# open up the data, see how it's formatted and look at the first 10 columns
+glimpse(midwest[, 1:10])
+```
+
+\newpage
+
+The data look tidy, everything seems formatted well; I can probably proceed with some visualizations.
+But maybe we should start with a summary table.
+
+```{r summary}
+# create a new data-frame, summarizing data by metro/non-metro counties
+my_summary <- midwest %>%
+  group_by(inmetro) %>%
+  summarize(
+    avg_density    = mean(popdensity), 
+    avg_perccoll   = mean(percollege), 
+    avg_perc_white = mean(percwhite)
+  )
+
+my_summary %>%
+  kable(col.names = c("Metro/Non-Metro", "Average density", 
+                      "Avg. Percentage of adults with a college degree", 
+                      "Mean % of white individuals"),
+        caption = "Density and % Caucasian, by metropolitan vs non-metropolitan counties",
+        digits = 2)
+```
+
+Metro counties have a higher level of non-white residents (`r signif(my_summary$avg_perc_white[2], 4)`% white).
+
+```{r linear model}
+fit <- lm(percbelowpoverty ~ perchsd + percollege, data = midwest)
+
+stest <- shapiro.test(fit$residuals)
+
+summary(fit)
+```
+
+The Shapiro-Test was highly significant (*W* = `r stest$statistic`, *p* = `r stest$p.value`).
