@@ -96,10 +96,10 @@ been highly useful in our work.
     + Analysis scripts? Syntax? Output files?
     + **Extract results, in order to interpret findings**
 2. Documentation/Description
-    + Create methods/results/discussion
-    + **Arrange statistics, tables, figures into report** (or manuscript, .docx, etc.)
+    + Create methods/results
+    + **Arrange statistics, tables, figures into report**
 3. Sharing with colleagues/community
-    + Forward manuscript to collaborators
+    + Forward results to collaborators
     + Receive comments & feedback
     + **Exchanging information in order to iterate**
     + Repeat #1 & #2
@@ -118,9 +118,11 @@ been highly useful in our work.
 </div>
 
 - **Do I have to use R?**
-    - (yes)
-    - But there's some support for other languages! 
-    - (python & SAS, more on this later)
+    - (yes & no)
+        + jupyter & ipython notebooks
+    - R-Markdown geared for R
+        + But there's some support for other languages! 
+        + (python & SAS, more on this later)
 
 - Widely used, deep knowledge-base, open-source
 - Great tools being developed with scientists in mind (like `ggplot2` & R-Markdown!)<br>
@@ -134,7 +136,7 @@ been highly useful in our work.
 - literate programming needs:
     + a documentation language
     + a programming language(s)
-- knitr is developed by Yihui Xie
+- `knitr` is developed by Yihui Xie
 - allows you to develop both the necessary explanatory text, while simultaneously developing analytic code that ultimately displays your results.
 - Scientific manuscripts already set-up to be "recipes" for a research project-- at least with (methods, results)
 - Working with your text and code this way allows you to have a smaller distance between them
