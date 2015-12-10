@@ -51,14 +51,14 @@ output:
 ## Review & (brief) Outline
 
 - Git/GitHub
-- New questions?
 - Collaborative tools to *centralize* your workflow.
+- New questions?
 
-- Extend on these concepts, as they relate to concepts in reproducibility
+- Extend on these concepts, as they relate to report writing
 - Similar mindset as last-time: provide an overview, help demonstrate options that have
 been highly useful in our work.
 
-## What is Reproducibility?
+## Reproducible Research
 
 <div class="notes">
 - Lots of government and public data being produced and shared
@@ -185,10 +185,18 @@ The estimated correlation between x and y was `r cor(x, y)`.
 
 ![markdown-3](example-rmd-pdf-1.PNG)
 
-## Analyses/Manuscripts as "Recipes"
+## Wrap-up | Analyses/Manuscripts as "Recipes"
 
 - Reproducibility an important subject overall, but has benefits even for those who work with sensitive files
 - Good code/syntax allows you to reconstruct an analysis for yourself
 - Storing local figures, data, summaries is a lot of cognitive overhead
-- Markdown files encompass a product/report from start-to-finish
+- Self-contained report/product
 - Figures/tables are embedded in the output-- no need to have a file of figures.
+
+## Resources & Questions
+
+- Numerous online classes & resources
+- [r-fiddle.org](www.r-fiddle.org)
+- [Beginner's Guide to R](http://www.computerworld.com/article/2497143/business-intelligence/business-intelligence-beginner-s-guide-to-r-introduction.html?page=1)
+- ["Things I Wish I Knew When Getting Started in R"](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling-with-r-things-i-wish-id-been-told/)
+- Questions?

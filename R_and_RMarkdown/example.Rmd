@@ -29,21 +29,23 @@ glimpse(midwest[, 1:10])
 ```
 
 \newpage
+
 The data look tidy, everything seems formatted well; I can probably proceed with some visualizations.
 But maybe we should start with a summary table.
 
-```{r}
+```{r summary}
 # create a new data-frame, summarizing data by metro/non-metro counties
 my_summary <- midwest %>%
   group_by(inmetro) %>%
   summarize(
     avg_density    = mean(popdensity), 
-    med_density    = median(popdensity), 
+    avg_perccoll   = mean(percollege), 
     avg_perc_white = mean(percwhite)
   )
 
 my_summary %>%
-  kable(col.names = c("Metro/Non-Metro", "Average density", "Median density", 
+  kable(col.names = c("Metro/Non-Metro", "Average density", 
+                      "Avg. Percentage of adults with a college degree", 
                       "Mean % of white individuals"),
         caption = "Density and % Caucasian, by metropolitan vs non-metropolitan counties",
         digits = 2)
@@ -51,3 +53,12 @@ my_summary %>%
 
 Metro counties have a higher level of non-white residents (`r signif(my_summary$avg_perc_white[2], 4)`% white).
 
+```{r linear model}
+fit <- lm(percbelowpoverty ~ perchsd + percollege, data = midwest)
+
+stest <- shapiro.test(fit$residuals)
+
+summary(fit)
+```
+
+The Shapiro-Test was highly significant (*W* = `r stest$statistic`, *p* = `r stest$p.value`).
